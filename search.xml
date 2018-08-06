@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[铭戈栈]]></title>
+    <url>%2F2018%2F08%2F06%2F%E9%93%AD%E6%88%88%E6%A0%88%2F</url>
+    <content type="text"><![CDATA[MarkDown基本语法：①标题大小 铭戈栈的第一篇博客markDown语法###②大小列表 java a IDE的选择 b 数据类型 c 数组 d 类文件 .class和.java的区别 e String类的使用 c++ 算法 ③引用外链第一种java博客学习对象第二种（优先）java博客学习对象 ##改字体④斜体字/这个字好像是斜体的！！/⑤删除字这是加删除线的文字⑥加粗这是加粗的文字⑦斜体加粗这是斜体加粗的文字 ##插入东西 三个横线： ##引用图片： ##代码区：1234567&lt;html&gt; &lt;title&gt; 我是标题 &lt;/title&gt; &lt;body&gt; &lt;/body&gt;&lt;/html&gt; ##引用区 第一个引用 第二个引用]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>目录</tag>
+        <tag>个人简介</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F08%2F06%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
