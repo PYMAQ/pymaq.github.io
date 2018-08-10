@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo搭建nexT主题博客参考]]></title>
+    <url>%2F2018%2F08%2F10%2FHexo%E6%90%AD%E5%BB%BAnext%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E5%8F%82%E8%80%83001%2F</url>
+    <content type="text"><![CDATA[一node.jsgit二检测测试三]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>nexT</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[铭戈栈]]></title>
     <url>%2F2018%2F08%2F06%2F%E9%93%AD%E6%88%88%E6%A0%88%2F</url>
     <content type="text"><![CDATA[MarkDown基本语法：①标题大小 铭戈栈的第一篇博客markDown语法###②大小列表 java a IDE的选择 b 数据类型 c 数组 d 类文件 .class和.java的区别 e String类的使用 c++ 算法 ③引用外链第一种java博客学习对象第二种（优先）java博客学习对象 ##改字体④斜体字/这个字好像是斜体的！！/⑤删除字这是加删除线的文字⑥加粗这是加粗的文字⑦斜体加粗这是斜体加粗的文字 ##插入东西 三个横线： ##引用图片： ##代码区：1234567&lt;html&gt; &lt;title&gt; 我是标题 &lt;/title&gt; &lt;body&gt; &lt;/body&gt;&lt;/html&gt; ##引用区 第一个引用 第二个引用]]></content>
