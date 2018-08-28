@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hexo搭建nexT主题博客参考]]></title>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F08%2F28%2Fhello-world%20-%20%E5%89%AF%E6%9C%AC%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[16分钟教你搭建一个Hexo博客>]]></title>
     <url>%2F2018%2F08%2F10%2FHexo%E6%90%AD%E5%BB%BAnext%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E5%8F%82%E8%80%83001%2F</url>
-    <content type="text"><![CDATA[一node.jsgit二检测测试三]]></content>
+    <content type="text"><![CDATA[目的：搭建一个hexo.next主题的博客 用时：大约要16分钟左右 条件：①一个git-bash命令行窗口②一个npm打包工具③一个node.js运行环境④一个gitHub账号]]></content>
       <categories>
         <category>博客</category>
       </categories>
