@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-CN">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -84,7 +84,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Gemini',
     version: '6.3.0',
     sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -266,9 +266,6 @@
   
 
   
-    
-
-  
 
   
     <div class="site-search">
@@ -311,6 +308,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
           
           <div id="content" class="content">
             
@@ -445,15 +445,12 @@
       
         
           
-          123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/30/java面试题之约瑟夫环问题求解策略四/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 约瑟夫环 问题</span></span><br><span class="line"><span class="comment"> * 获取幸运数字</span></span><br><span class="line"><span class="comment"> * 思路：</span></span><br><span class="line"><span class="comment"> * ①集合数组的</span></span><br><span class="line"><span class="comment"> * ②递归</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">josephRing03</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"第一种方法：集合法"</span>);</span><br><span class="line">        System.out.println(getLuckNum01(<span class="number">10</span>));</span><br><span class="line">        System.out.println(<span class="string">"第二种方法：递归法"</span>);</span><br><span class="line">        System.out.println(getLuckNum02(<span class="number">10</span>,<span class="number">3</span>,<span class="number">8</span>));</span><br><span class="line">        System.out.println(getLuckNum02(<span class="number">9</span>,<span class="number">3</span>,<span class="number">7</span>));</span><br><span class="line">        System.out.println(getLuckNum02(<span class="number">8</span>,<span class="number">3</span>,<span class="number">6</span>));</span><br><span class="line">        System.out.println(getLuckNum02(<span class="number">7</span>,<span class="number">3</span>,<span class="number">5</span>));</span><br><span class="line">        System.out.println(getLuckNum02(<span class="number">6</span>,<span class="number">3</span>,<span class="number">4</span>));</span><br><span class="line">        System.out.println(getLuckNum02(<span class="number">5</span>,<span class="number">3</span>,<span class="number">3</span>));</span><br><span class="line">        System.out.println(getLuckNum02(<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>));</span><br><span class="line">        System.out.println(<span class="string">"第三种方法：公式法"</span>);<span class="comment">//本质也是递归</span></span><br><span class="line">        System.out.println(getlive(<span class="number">10</span>, <span class="number">3</span>));</span><br><span class="line">        System.out.println(getlive( <span class="number">9</span>, <span class="number">3</span>));</span><br><span class="line">        System.out.println(getlive( <span class="number">8</span> , <span class="number">3</span>));</span><br><span class="line">        System.out.println(<span class="string">"第三.001种方法：公式形象记忆法"</span>);<span class="comment">//本质也是递归</span></span><br><span class="line">        System.out.println(getLuckNum(<span class="number">10</span>, <span class="number">3</span>));</span><br><span class="line">        System.out.println(getLuckNum(<span class="number">9</span>, <span class="number">3</span>));</span><br><span class="line">        System.out.println(getLuckNum(<span class="number">8</span>, <span class="number">3</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//①数组集合法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getLuckNum01</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//1.定义一个集合，并且添加人进去，10环就add十个人进去，100人环就add100个人进去</span></span><br><span class="line">        ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= num; i++) &#123;</span><br><span class="line">            list.add(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//2.定义一个指针，区别于下面的i，这个count是直接跟人头对接的，所以要从1开始。</span></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">        <span class="comment">//3.遍历所有元素，一直“杀死”人直到只剩下最后一个人即list.size()!=1时都要继续遍历</span></span><br><span class="line">       <span class="comment">/* System.out.println(list.size());*/</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;list.size()!=<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="comment">//4.如果已经遍历到最后一个人了，则重新开始，i重新等于0，又一个新环来进行“杀人”游戏</span></span><br><span class="line">            <span class="comment">//注：这里要设置判断条件为list.size(),而不是list.size()-1是有原因的</span></span><br><span class="line">            <span class="comment">//因为i作为下标一直遍历增加，直到最后一个下标，都是可以杀人的，也就是说还可以进行下面的if判断以及count++</span></span><br><span class="line">            <span class="comment">//所以，直到i增加到list.size时，已经可以说是下标越界了，此时就要使得要越界的这个i变成0，重新开始新的“i生”（人生~哈哈哈）</span></span><br><span class="line">            <span class="keyword">if</span>(i==list.size())&#123;</span><br><span class="line">                i =<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//5.当指针的对3求余为0时，去除掉list的这个元素。</span></span><br><span class="line">            <span class="comment">//注：由于少了一个数，后面的数会补上前来，下标不变的话，i又必须得-1，才能不会错过当前的人</span></span><br><span class="line">             <span class="keyword">if</span>(count%<span class="number">3</span> == <span class="number">0</span>)&#123;</span><br><span class="line">                list.remove(i--);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//6.count继续累加</span></span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> list.get(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//②递归法（大神法）</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getLuckNum02</span><span class="params">(<span class="keyword">int</span> sum,<span class="keyword">int</span> value,<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>( n ==<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> (sum+value-<span class="number">1</span>)%sum;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> (getLuckNum02(sum-<span class="number">1</span>, value, n-<span class="number">1</span>)+value)%sum;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//3.公式法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getlive</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">1</span>)&#123;<span class="keyword">return</span> <span class="number">1</span>;&#125;</span><br><span class="line">        <span class="keyword">return</span> (getlive(n-<span class="number">1</span>,m)+m-<span class="number">1</span>)%n+<span class="number">1</span>;<span class="comment">//背下来就可以了</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//3.01形象记忆公式法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getLuckNum</span><span class="params">(<span class="keyword">int</span> sumMan,<span class="keyword">int</span> jiange)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(sumMan == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> (getLuckNum(sumMan-<span class="number">1</span>,jiange)+jiange-<span class="number">1</span>)%sumMan+<span class="number">1</span>;<span class="comment">//背下来就可以了</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>总结：</p>
+<p>①直接背公式。</p>
+<p>②理解指针指向。</p>
+
+          
         
       
     </div>
@@ -619,19 +616,16 @@
       
         
           
-          /*
- 二分查找：
+            <p>/*<em>
+ </em>二分查找：</p>
+<ul>
+<li>查找元素对应的索引</li>
+<li>前提：数组有序，这点特别重要！！！要求的数组一定要按照顺序来的。<br> */<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> day13.searchAlgorithm;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">binarySearch</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">11</span>,<span class="number">22</span>, <span class="number">33</span>, <span class="number">44</span>, <span class="number">55</span>&#125;;</span><br><span class="line"></span><br><span class="line">        System.out.println(binarysearch(arr,<span class="number">11</span>));</span><br><span class="line">        System.out.println(binarysearch(arr,<span class="number">22</span>));</span><br><span class="line">        System.out.println(binarysearch(arr,<span class="number">33</span>));</span><br><span class="line">        System.out.println(binarysearch(arr,<span class="number">44</span>));</span><br><span class="line">        System.out.println(binarysearch(arr,<span class="number">55</span>));</span><br><span class="line"></span><br><span class="line">        System.out.println(binarysearch(arr,<span class="number">66</span>));</span><br><span class="line">        System.out.println(binarysearch(arr,<span class="number">77</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">binarysearch</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 二分查找3点</span></span><br><span class="line"><span class="comment">         * 1.确定 小中大 3个索引</span></span><br><span class="line"><span class="comment">         * 2.判断 中索引 的值是否等于 待查值，等于即返回true，不等于进入while循环</span></span><br><span class="line"><span class="comment">         * 3.判断 值的索引与中的索引的大小，</span></span><br><span class="line"><span class="comment">                中大就大索引改为中大索引-1，</span></span><br><span class="line"><span class="comment">                中小就小索引改为中大索引+1，</span></span><br><span class="line"><span class="comment">               中大索引本身改为大小索引之和的一半</span></span><br><span class="line"><span class="comment">         * 4.当小索引大于大索引时返回false</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">int</span> max = arr.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> min = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> mid = (max + min) / <span class="number">2</span>;</span><br><span class="line">        Boolean flag;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (arr[mid]!=num) &#123;   <span class="comment">//当中间值</span></span><br><span class="line">            mid = (max + min) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (arr[mid] &gt; num) &#123;</span><br><span class="line">                max = mid - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &lt; num) &#123;</span><br><span class="line">                min = mid + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(min&gt;max)&#123;</span><br><span class="line">                <span class="keyword">return</span>  <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>  <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>总结：<br>二分查找关键在于数组中数字要有序，其次是确定好三个索引的大小关系。</p>
 
-查找元素对应的索引
-前提：数组有序，这点特别重要！！！要求的数组一定要按照顺序来的。 */12345678910111213141516171819202122232425262728293031323334353637383940414243444546package day
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/28/java面试题之二分查找题型的解题策略一/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -797,23 +791,18 @@
       
         
           
-          /**不死神兔 月月生问题
+            <p>/**不死神兔 月月生问题</p>
+<ul>
+<li>假设一对刚出生的小兔一个月后会长成大兔，再过一个月就会生下一对小兔，并且此后每个月都会生下一对兔子</li>
+<li>问：一对刚出生的兔子，一年内可以繁殖成多少对兔子</li>
+<li>两种解题思路：</li>
+<li>①利用数组</li>
+<li>②递归计算<br> */</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> *不死神兔 月月生问题</span></span><br><span class="line"><span class="comment"> * 假设一对刚出生的小兔一个月后会长成大兔，再过一个月就会生下一对小兔，并且此后每个月都会生下一对兔子</span></span><br><span class="line"><span class="comment"> * 问：一对刚出生的兔子，一年内可以繁殖成多少对兔子</span></span><br><span class="line"><span class="comment"> * 两种解题思路：</span></span><br><span class="line"><span class="comment"> * ①利用数组</span></span><br><span class="line"><span class="comment"> * ②递归计算</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">rabbitTest01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">// ①利用数组(7行代码搞定)</span></span><br><span class="line">         getRabbitNum01();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//②递归计算(2行代码搞定)</span></span><br><span class="line">        <span class="comment">//1.定义一个数组，数组大小意味着第几个月的兔子数量</span></span><br><span class="line">        <span class="keyword">int</span> numRabbit =<span class="number">12</span>;</span><br><span class="line">        <span class="keyword">int</span>[] arr =<span class="keyword">new</span> <span class="keyword">int</span>[numRabbit];</span><br><span class="line">        <span class="comment">//2.利用递归输出,核心是:fun(num) =fun(num-2)+fun(num-1);</span></span><br><span class="line">         <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;arr.length ; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">"第"</span>+(i+<span class="number">1</span>)+<span class="string">"个月的兔子数量是"</span>+getNum(i+<span class="number">1</span>)+<span class="string">"只"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getNum</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;<span class="comment">//利用三元运算符使代码更简洁</span></span><br><span class="line">        <span class="keyword">return</span> (i ==<span class="number">1</span>||i ==<span class="number">2</span>) ? <span class="number">1</span> :(getNum(i-<span class="number">2</span>)+getNum(i-<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">/*下面小测试的答案在这里：</span></span><br><span class="line"><span class="comment">第10个月————21对大兔子生下21对小兔子</span></span><br><span class="line"><span class="comment">————————13对小兔子长成13对大兔子  ——共55对（42+13）</span></span><br><span class="line"><span class="comment">你做对了么?对了就请点个喜欢吧~~~</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getRabbitNum01</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//1.定义一个数组，数组大小意味着第几个月的兔子数量</span></span><br><span class="line">        <span class="keyword">int</span> numRabbit =<span class="number">12</span>;</span><br><span class="line">        <span class="keyword">int</span>[] arr =<span class="keyword">new</span> <span class="keyword">int</span>[numRabbit];</span><br><span class="line">        <span class="comment">//2.初始化第一和第二个元素为1</span></span><br><span class="line">        arr[<span class="number">0</span>]=arr[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">        <span class="comment">//3.遍历一下这个数组，也就是让每个月都有个兔子总数值</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;arr.length ; i++) &#123;</span><br><span class="line">            arr[i] = arr[i-<span class="number">2</span>] +arr[i-<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//4.选择输出每个月份的兔子总数，直观清晰</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;arr.length ; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">"第"</span>+(i+<span class="number">1</span>)+<span class="string">"个月的兔子数量是"</span>+arr[i]+<span class="string">"只"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>总结：<br>规律掌握如下，一点点理解，这个不会太难。<br>月份——————兔子生长情况——————兔子当月总对数<br>第1个月————1对小兔子———————— 共1对<br>第2个月————1对大兔子————————  共1对<br>第3个月————1对大兔子生下1对小兔子——共2对（1+1）<br>第4个月————1对大兔子生下1对小兔子<br>————————1对小兔子长成1对大兔子  ——共3对（1+2）<br>第5个月————2对大兔子生下2对小兔子<br>————————1对小兔子长成1对大兔子  ——共5对（2+3）<br>第6个月————3对大兔子生下3对小兔子<br>————————2对小兔子长成2对大兔子  ——共8对（6+2）<br>第7个月————5对大兔子生下5对小兔子<br>————————3对小兔子长成3对大兔子  ——共13对（10+3）<br>第8个月————8对大兔子生下8对小兔子<br>————————5对小兔子长成5对大兔子  ——共21对（16+5）<br>第9个月————13对大兔子生下13对小兔子<br>————————8对小兔子长成8对大兔子  ——共34对（26+8）<br>小测试：看你懂了没？<br>第10个月————？对大兔子生下？对小兔子<br>————————？对小兔子长成？对大兔子  ——共？对（？+？）<br>答案藏在本篇文章中，聪明人10秒钟内应该能看到。<br>或者，自己把代码敲一遍，结果自然明白。</p>
 
-假设一对刚出生的小兔一个月后会长成大兔，再过一个月就会生下一对小兔，并且此后每个月都会生下一对兔子
-问：一对刚出生的兔子，一年内可以繁殖成多少对兔子
-两种解题思路：
-①利用数组
-②递归计算 */
-
-123456789101112131415161718192021222
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/28/java面试题之斐波那契数列题型两种解题策略二/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -979,17 +968,14 @@
       
         
           
-          /**
+            <p>/**</p>
+<ul>
+<li>求出：1000的阶乘所有零和尾部零的个数，不用阶乘。<br> */<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.BigInteger;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test1000For002</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//错误方案：</span></span><br><span class="line">        <span class="comment">//demo01();1000阶乘远大于long的类型范围,行不通。</span></span><br><span class="line">        <span class="comment">//正确方案：</span></span><br><span class="line">        <span class="comment">//calculateTheNumOfZeroTest01(); 求出这个大数字中所有0的个数</span></span><br><span class="line">        <span class="comment">//calculateThelastZeroNum02(); 求出这个大数字中尾部0的个数</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">calculateThelastZeroNum02</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        BigInteger b1 =<span class="keyword">new</span> BigInteger(<span class="string">"1"</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span> ;i&lt;=<span class="number">1000</span>;i++)&#123;</span><br><span class="line">            BigInteger b2 = <span class="keyword">new</span> BigInteger(i+<span class="string">""</span>);</span><br><span class="line">            b1 = b1.multiply(b2);</span><br><span class="line">        &#125;</span><br><span class="line">        String string2 =b1.toString();</span><br><span class="line">        StringBuilder sb2 = <span class="keyword">new</span> StringBuilder(string2);</span><br><span class="line">        string2 =sb2.reverse().toString();<span class="comment">//链式编程，反转字符串再赋值</span></span><br><span class="line">        <span class="keyword">int</span> count2=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;string2.length() ; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="string">'0'</span>==string2.charAt(i))&#123;</span><br><span class="line">                count2++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(count2);<span class="comment">//249</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">calculateTheNumOfZeroTest01</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        BigInteger b1 =<span class="keyword">new</span> BigInteger(<span class="string">"1"</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span> ;i&lt;=<span class="number">1000</span>;i++)&#123;</span><br><span class="line">            BigInteger b2 = <span class="keyword">new</span> BigInteger(i+<span class="string">""</span>);</span><br><span class="line">            b1 = b1.multiply(b2);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// System.out.println(b1);</span></span><br><span class="line">        String string =b1.toString();</span><br><span class="line">        <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">        <span class="comment">/* char[] arr =string.toCharArray();*/</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;string.length() ; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="string">'0'</span> == string.charAt(i))&#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(count);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">demo01</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> num =<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">long</span> i=<span class="number">1</span>; i &lt;= <span class="number">1000</span>;i++)&#123;</span><br><span class="line">            num =i * num;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(num);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>总结：<br>①当需求的数的个数超过int和long的类型的最大长度时，即2^32-1这个值时，可以利用java自带的类库BigInterger对数字进行字符串化并且利用类的方法进行求值。<br>②考虑到求尾数0的个数，当看到求【尾数类】的题目时，要想到String中没有直接倒过来的方法，要把String放入StringBulidedr中，再利用StringBulider的方法对其进行反转，思路就开了。<br>③链式编程了解一下emmm。</p>
 
-求出：1000的阶乘所有零和尾部零的个数，不用阶乘。 */12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061imp
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/28/java面试题之求长整数中所有0和尾数0的个数的策略三/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -1155,20 +1141,13 @@
       
         
           
-          
-目的：搭建一个hexo.next主题的博客
-用时：大约要16分钟左右
-条件：①一个git-bash命令行窗口②一个npm打包工具③一个node.js运行环境④一个gitHub账号  
+            <blockquote>
+<p>目的：搭建一个hexo.next主题的博客</p>
+<p>用时：大约要16分钟左右</p>
+<p>条件：<br>①一个git-bash命令行窗口<br>②一个npm打包工具<br>③一个node.js运行环境<br>④一个gitHub账号  </p>
+</blockquote>
 
-
           
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/10/Hexo搭建next主题博客参考001/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -1489,15 +1468,17 @@
       
         
           
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/06/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
         
       
     </div>
@@ -1721,7 +1702,7 @@
 
 
 
-  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.3.0</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.3.0</div>
 
 
 
@@ -1844,6 +1825,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
 
   
 
