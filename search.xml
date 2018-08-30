@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title><![CDATA[java面试题之约瑟夫环问题求解策略《四》]]></title>
     <url>%2F2018%2F08%2F30%2Fjava%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B9%8B%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A3%E7%AD%96%E7%95%A5%E5%9B%9B%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091import java.util.ArrayList;/** * 约瑟夫环 问题 * 获取幸运数字 * 思路： * ①集合数组的 * ②递归 */public class josephRing03 &#123; public static void main(String[] args)&#123; System.out.println("第一种方法：集合法"); System.out.println(getLuckNum01(10)); System.out.println("第二种方法：递归法"); System.out.println(getLuckNum02(10,3,8)); System.out.println(getLuckNum02(9,3,7)); System.out.println(getLuckNum02(8,3,6)); System.out.println(getLuckNum02(7,3,5)); System.out.println(getLuckNum02(6,3,4)); System.out.println(getLuckNum02(5,3,3)); System.out.println(getLuckNum02(4,3,2)); System.out.println("第三种方法：公式法");//本质也是递归 System.out.println(getlive(10, 3)); System.out.println(getlive( 9, 3)); System.out.println(getlive( 8 , 3)); System.out.println("第三.001种方法：公式形象记忆法");//本质也是递归 System.out.println(getLuckNum(10, 3)); System.out.println(getLuckNum(9, 3)); System.out.println(getLuckNum(8, 3)); &#125; //①数组集合法 public static int getLuckNum01(int num) &#123; //1.定义一个集合，并且添加人进去，10环就add十个人进去，100人环就add100个人进去 ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;(); for (int i = 1; i &lt;= num; i++) &#123; list.add(i); &#125; //2.定义一个指针，区别于下面的i，这个count是直接跟人头对接的，所以要从1开始。 int count = 1; //3.遍历所有元素，一直“杀死”人直到只剩下最后一个人即list.size()!=1时都要继续遍历 /* System.out.println(list.size());*/ for (int i=0;list.size()!=1;i++)&#123; //4.如果已经遍历到最后一个人了，则重新开始，i重新等于0，又一个新环来进行“杀人”游戏 //注：这里要设置判断条件为list.size(),而不是list.size()-1是有原因的 //因为i作为下标一直遍历增加，直到最后一个下标，都是可以杀人的，也就是说还可以进行下面的if判断以及count++ //所以，直到i增加到list.size时，已经可以说是下标越界了，此时就要使得要越界的这个i变成0，重新开始新的“i生”（人生~哈哈哈） if(i==list.size())&#123; i =0; &#125; //5.当指针的对3求余为0时，去除掉list的这个元素。 //注：由于少了一个数，后面的数会补上前来，下标不变的话，i又必须得-1，才能不会错过当前的人 if(count%3 == 0)&#123; list.remove(i--); &#125; //6.count继续累加 count++; &#125; return list.get(0); &#125; //②递归法（大神法） public static int getLuckNum02(int sum,int value,int n) &#123; if( n ==1)&#123; return (sum+value-1)%sum; &#125; else&#123; return (getLuckNum02(sum-1, value, n-1)+value)%sum; &#125; &#125; //3.公式法 public static int getlive(int n,int m)&#123; if(n == 1)&#123;return 1;&#125; return (getlive(n-1,m)+m-1)%n+1;//背下来就可以了 &#125; //3.01形象记忆公式法 public static int getLuckNum(int sumMan,int jiange)&#123; if(sumMan == 1) &#123; return 1; &#125; else&#123; return (getLuckNum(sumMan-1,jiange)+jiange-1)%sumMan+1;//背下来就可以了 &#125; &#125;&#125; 总结： ①直接背公式。 ②理解指针指向。]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>算法</tag>
+        <tag>面试</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[java面试题之求长整数中所有0和尾数0的个数的策略《三》]]></title>
@@ -19,9 +27,17 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title><![CDATA[java面试题之斐波那契数列题型两种解题策略《二》]]></title>
     <url>%2F2018%2F08%2F28%2Fjava%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B9%8B%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E9%A2%98%E5%9E%8B%E4%B8%A4%E7%A7%8D%E8%A7%A3%E9%A2%98%E7%AD%96%E7%95%A5%E4%BA%8C%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[/**不死神兔 月月生问题 假设一对刚出生的小兔一个月后会长成大兔，再过一个月就会生下一对小兔，并且此后每个月都会生下一对兔子 问：一对刚出生的兔子，一年内可以繁殖成多少对兔子 两种解题思路： ①利用数组 ②递归计算 */ 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849/* *不死神兔 月月生问题 * 假设一对刚出生的小兔一个月后会长成大兔，再过一个月就会生下一对小兔，并且此后每个月都会生下一对兔子 * 问：一对刚出生的兔子，一年内可以繁殖成多少对兔子 * 两种解题思路： * ①利用数组 * ②递归计算 */public class rabbitTest01 &#123; public static void main(String[] args)&#123; // ①利用数组(7行代码搞定) getRabbitNum01(); //②递归计算(2行代码搞定) //1.定义一个数组，数组大小意味着第几个月的兔子数量 int numRabbit =12; int[] arr =new int[numRabbit]; //2.利用递归输出,核心是:fun(num) =fun(num-2)+fun(num-1); for (int i = 0; i &lt;arr.length ; i++) &#123; System.out.println("第"+(i+1)+"个月的兔子数量是"+getNum(i+1)+"只"); &#125; &#125; public static int getNum(int i)&#123;//利用三元运算符使代码更简洁 return (i ==1||i ==2) ? 1 :(getNum(i-2)+getNum(i-1)); &#125;/*下面小测试的答案在这里：第10个月————21对大兔子生下21对小兔子————————13对小兔子长成13对大兔子 ——共55对（42+13）你做对了么?对了就请点个喜欢吧~~~*/ public static void getRabbitNum01() &#123; //1.定义一个数组，数组大小意味着第几个月的兔子数量 int numRabbit =12; int[] arr =new int[numRabbit]; //2.初始化第一和第二个元素为1 arr[0]=arr[1]=1; //3.遍历一下这个数组，也就是让每个月都有个兔子总数值 for (int i = 2; i &lt;arr.length ; i++) &#123; arr[i] = arr[i-2] +arr[i-1]; &#125; //4.选择输出每个月份的兔子总数，直观清晰 for (int i = 0; i &lt;arr.length ; i++) &#123; System.out.println("第"+(i+1)+"个月的兔子数量是"+arr[i]+"只"); &#125; &#125;&#125; 总结：规律掌握如下，一点点理解，这个不会太难。月份——————兔子生长情况——————兔子当月总对数第1个月————1对小兔子———————— 共1对第2个月————1对大兔子———————— 共1对第3个月————1对大兔子生下1对小兔子——共2对（1+1）第4个月————1对大兔子生下1对小兔子————————1对小兔子长成1对大兔子 ——共3对（1+2）第5个月————2对大兔子生下2对小兔子————————1对小兔子长成1对大兔子 ——共5对（2+3）第6个月————3对大兔子生下3对小兔子————————2对小兔子长成2对大兔子 ——共8对（6+2）第7个月————5对大兔子生下5对小兔子————————3对小兔子长成3对大兔子 ——共13对（10+3）第8个月————8对大兔子生下8对小兔子————————5对小兔子长成5对大兔子 ——共21对（16+5）第9个月————13对大兔子生下13对小兔子————————8对小兔子长成8对大兔子 ——共34对（26+8）小测试：看你懂了没？第10个月————？对大兔子生下？对小兔子————————？对小兔子长成？对大兔子 ——共？对（？+？）答案藏在本篇文章中，聪明人10秒钟内应该能看到。或者，自己把代码敲一遍，结果自然明白。]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>算法</tag>
+        <tag>面试</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[java面试题之二分查找题型的解题策略《一》]]></title>
