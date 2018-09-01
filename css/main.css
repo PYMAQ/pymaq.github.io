@@ -1865,24 +1865,6 @@ pre .javascript .function {
     hide() if not hexo-config('sidebar.onmobile');
   }*/
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  .sidebar-toggle {
-    right: 20px;
-    bottom: 45px;
-    -moz-opacity: 0.8;
-    -khtml-opacity: 0.8;
-    opacity: 0.8;
-  }
-}
-@media (max-width: 767px) {
-  .sidebar-toggle {
-    right: 20px;
-    bottom: 45px;
-    -moz-opacity: 0.8;
-    -khtml-opacity: 0.8;
-    opacity: 0.8;
-  }
-}
 .sidebar-toggle-line {
   position: relative;
   display: inline-block;
@@ -2005,7 +1987,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #09e0b3;
+  background: #afa655;
 }
 .links-of-blogroll {
   font-size: 13px;
