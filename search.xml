@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[java面试题之汉诺塔求解策略《六》]]></title>
-    <url>%2F2018%2F09%2F06%2Fjava%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B9%8B%E6%B1%89%E8%AF%BA%E5%A1%94%E6%B1%82%E8%A7%A3%E7%AD%96%E7%95%A5%E5%85%AD%2F</url>
+    <url>%2F2018%2F09%2F06%2FjavaForSix%2F</url>
     <content type="text"><![CDATA[java版汉诺塔1234567891011121314151617181920212223242526272829public class Hanoi &#123; public static void main(String[] args)&#123; Hanoi.hanoi(3,'A','B','C'); &#125; public static void hanoi(int n,char a,char b,char c)&#123; ZF z = new ZF(); if(n==1)&#123; print(a,c); &#125; else&#123; hanoi(n-1,a,c,b); print(a,c); hanoi(n-1,b,a,c); &#125; System.out.println("---------第"+(ZF.x++)+"次递归---------------------------------"); &#125; public static void print(char a,char c)&#123; System.out.println("盘子从"+a+"---&gt;"+c); &#125;&#125; class ZF &#123; static public int x=1;&#125;//思想是将全局变量X设置成SS类的属性，//再在SS中添加fuzhi方法，来改变X的值。 汉诺塔求解推荐阅读博客：https://www.bilibili.com/video/av7398130/https://blog.csdn.net/xb2355404/article/details/79144451https://www.cnblogs.com/antineutrino/p/3334540.html]]></content>
       <categories>
         <category>博客</category>
