@@ -126,7 +126,7 @@
 
 
   <meta name="description" content="/*  二分查找：  查找元素对应的索引 前提：数组有序，这点特别重要！！！要求的数组一定要按照顺序来的。 */12345678910111213141516171819202122232425262728293031323334353637383940414243444546package day13.searchAlgorithm;public class binarySearch &amp;#123">
-<meta name="keywords" content="算法,面试,java">
+<meta name="keywords" content="java,算法,面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java面试题之二分查找题型的解题策略《一》">
 <meta property="og:url" content="http://yoursite.com/2018/08/27/java面试题之二分查找题型的解题策略一/index.html">
@@ -550,11 +550,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/java/" rel="tag"># </i>java</a>
+          
             <a href="/tags/算法/" rel="tag"># </i>算法</a>
           
             <a href="/tags/面试/" rel="tag"># </i>面试</a>
-          
-            <a href="/tags/java/" rel="tag"># </i>java</a>
           
         </div>
       
@@ -674,34 +674,6 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -1455,9 +1427,25 @@ show_date_time();
             });
           } else {
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
             
           }
         },

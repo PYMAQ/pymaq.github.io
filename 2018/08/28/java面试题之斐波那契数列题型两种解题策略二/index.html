@@ -126,7 +126,7 @@
 
 
   <meta name="description" content="/**不死神兔 月月生问题  假设一对刚出生的小兔一个月后会长成大兔，再过一个月就会生下一对小兔，并且此后每个月都会生下一对兔子 问：一对刚出生的兔子，一年内可以繁殖成多少对兔子 两种解题思路： ①利用数组 ②递归计算 */   1234567891011121314151617181920212223242526272829303132333435363738394041424344454647">
-<meta name="keywords" content="算法,面试,java">
+<meta name="keywords" content="java,算法,面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java面试题之斐波那契数列题型两种解题策略《二》">
 <meta property="og:url" content="http://yoursite.com/2018/08/28/java面试题之斐波那契数列题型两种解题策略二/index.html">
@@ -552,11 +552,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/java/" rel="tag"># </i>java</a>
+          
             <a href="/tags/算法/" rel="tag"># </i>算法</a>
           
             <a href="/tags/面试/" rel="tag"># </i>面试</a>
-          
-            <a href="/tags/java/" rel="tag"># </i>java</a>
           
         </div>
       
@@ -676,34 +676,6 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -1457,9 +1429,25 @@ show_date_time();
             });
           } else {
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
             
           }
         },

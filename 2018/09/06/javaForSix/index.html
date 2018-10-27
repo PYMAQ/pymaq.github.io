@@ -126,7 +126,7 @@
 
 
   <meta name="description" content="java版汉诺塔1234567891011121314151617181920212223242526272829public class Hanoi &amp;#123;    public static void main(String[] args)&amp;#123;            Hanoi.hanoi(3,&apos;A&apos;,&apos;B&apos;,&apos;C&apos;);    &amp;#125;    public static voi">
-<meta name="keywords" content="算法,面试,java,递归">
+<meta name="keywords" content="java,算法,面试,递归">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java面试题之汉诺塔求解策略《六》">
 <meta property="og:url" content="http://yoursite.com/2018/09/06/javaForSix/index.html">
@@ -532,11 +532,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/java/" rel="tag"># </i>java</a>
+          
             <a href="/tags/算法/" rel="tag"># </i>算法</a>
           
             <a href="/tags/面试/" rel="tag"># </i>面试</a>
-          
-            <a href="/tags/java/" rel="tag"># </i>java</a>
           
             <a href="/tags/递归/" rel="tag"># </i>递归</a>
           
@@ -663,34 +663,6 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -1460,9 +1432,25 @@ show_date_time();
             });
           } else {
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
             
           }
         },
