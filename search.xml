@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[记录这一天，将会是人生的第二天]]></title>
+    <url>%2F2018%2F11%2F26%2F%E8%AE%B0%E5%BD%95%E8%BF%99%E4%B8%80%E5%A4%A92018-11-26%2F</url>
+    <content type="text"><![CDATA[生而为铭之一族，一定要记住罗杰说的一句话： 每个人都有自己的出场机会，不要心急，慢慢等着，你的出场机会，自己就会来了。 -记录于2018年11月26日19:14分]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>我的天</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[java面试题之汉诺塔求解策略《六》]]></title>
     <url>%2F2018%2F09%2F06%2FjavaForSix%2F</url>
     <content type="text"><![CDATA[java版汉诺塔1234567891011121314151617181920212223242526272829public class Hanoi &#123; public static void main(String[] args)&#123; Hanoi.hanoi(3,'A','B','C'); &#125; public static void hanoi(int n,char a,char b,char c)&#123; ZF z = new ZF(); if(n==1)&#123; print(a,c); &#125; else&#123; hanoi(n-1,a,c,b); print(a,c); hanoi(n-1,b,a,c); &#125; System.out.println("---------第"+(ZF.x++)+"次递归---------------------------------"); &#125; public static void print(char a,char c)&#123; System.out.println("盘子从"+a+"---&gt;"+c); &#125;&#125; class ZF &#123; static public int x=1;&#125;//思想是将全局变量X设置成SS类的属性，//再在SS中添加fuzhi方法，来改变X的值。 汉诺塔求解推荐阅读博客：https://www.bilibili.com/video/av7398130/https://blog.csdn.net/xb2355404/article/details/79144451https://www.cnblogs.com/antineutrino/p/3334540.html]]></content>
