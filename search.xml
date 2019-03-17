@@ -21,8 +21,8 @@
         <category>JavaWeb</category>
       </categories>
       <tags>
-        <tag>java</tag>
         <tag>Servlet</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -33,20 +33,20 @@
         <category>JavaWeb</category>
       </categories>
       <tags>
-        <tag>java</tag>
         <tag>JSP</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[02_JavaWeb基础_《JSP技术点第一篇》]]></title>
-    <url>%2F2018%2F11%2F29%2F02_JavaWeb%E5%9F%BA%E7%A1%80_%E3%80%8AJSP%E6%8A%80%E6%9C%AF%E7%82%B9%E7%AC%AC%E4%B8%80%E7%AF%87%E3%80%8B%2F</url>
+    <url>%2F2018%2F11%2F29%2F02_JavaWeb%E5%9F%BA%E7%A1%80_%E3%80%8AJSP%E6%8A%80%E6%9C%AF%E7%82%B9%E7%AC%AC%E4%B8%80%E7%AF%87%E3%80%8B%20-%20%E5%89%AF%E6%9C%AC%2F</url>
     <content type="text"><![CDATA[02_JavaWeb基础_《JSP技术点第一讲》]]></content>
       <categories>
         <category>JavaWeb</category>
       </categories>
       <tags>
-        <tag>java</tag>
         <tag>JSP</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -57,8 +57,8 @@
         <category>JavaWeb</category>
       </categories>
       <tags>
-        <tag>java</tag>
         <tag>Servlet</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -124,6 +124,19 @@
         <tag>java</tag>
         <tag>算法</tag>
         <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[00_踩坑记录]]></title>
+    <url>%2F2018%2F08%2F29%2F00_%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[记录： 中文踩坑： ①Servlet的正文前，正文后，加中文 req.setCharacterEncoding(“UTF-8”); ② response.setContentType(“text/html; charset=UTF-8”);]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JSP</tag>
+        <tag>Servlet</tag>
       </tags>
   </entry>
   <entry>
