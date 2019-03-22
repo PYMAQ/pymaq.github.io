@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[03_JavaWeb基础_《SpringBoot项目踩坑记录01》]]></title>
+    <url>%2F2019%2F03%2F22%2F03_JavaWeb%E5%9F%BA%E7%A1%80_%E3%80%8ASpringBoot%E9%A1%B9%E7%9B%AE%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%9501%E3%80%8B%2F</url>
+    <content type="text"><![CDATA[遇到的坑：1.pdf复制过来的会自带空格，但是idea发现不了，会报错。解决办法：删除重新打 2.maven配置的plugins的包下面报红线解决办法：https://www.cnblogs.com/best-lwj/articles/9221309.html 删除所有以lastUpdated结尾的文件重新点击reimport即可 3.pdf的配置直接粘贴到pom文件和xml文件，然后昨天pom文件报错，今天xml文件报错我错了 低级问题联系两个坑 估计这辈子都忘不了了emmmm 4.Maven run 的时候错误Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE:repackage (default) on project spring-boot-01-hello: Execution default of goal org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE:repackage failed: Plugin org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE or one of its dependencies could not be resolved: Failed to collect dependencies at org.springframework.boot:spring-boot-maven-plugin:jar:2.0.6.RELEASE -&gt; org.apache.maven:maven-archiver:jar:2.6 -&gt; org.codehaus.plexus:plexus-archiver:jar:2.8.1: Failed to read artifact descriptor for org.codehaus.plexus:plexus-archiver:jar:2.8.1: Could not transfer artifact org.codehaus.plexus:plexus-components:pom:1.3 from/to alimaven (http://maven.aliyun.com/nexus/content/groups/public/): maven.aliyun.com: Unknown host maven.aliyun.com -&gt; [Help 1][ERROR] 莫名其妙好了，可能是因为加了依赖： `xml com.mengxuegu.springboot.HelloMainApplication &lt;project.build.sourceEncoding&gt; UTF-8 &lt;/project.build.sourceEncoding&gt; &lt;project.reporting.outputEncoding&gt; UTF-8 &lt;/project.reporting.outputEncoding&gt; &lt;java.version&gt; 1.8 &lt;/java.version&gt;]]></content>
+      <categories>
+        <category>JavaWeb</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>SpringBoot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[01_JavaWeb基础_《Servlet技术点第二篇》]]></title>
     <url>%2F2018%2F12%2F07%2F01_JavaWeb%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E3%80%8AServlet%E6%8A%80%E6%9C%AF%E7%82%B9%E7%AC%AC%E4%BA%8C%E7%AF%87%E3%80%8B%2F</url>
     <content type="text"><![CDATA[01_JavaWeb基础——《Servlet技术点第二讲》]]></content>
@@ -26,7 +38,7 @@
   </entry>
   <entry>
     <title><![CDATA[02_JavaWeb基础_《JSP技术点第一篇》]]></title>
-    <url>%2F2018%2F11%2F29%2F02_JavaWeb%E5%9F%BA%E7%A1%80_%E3%80%8AJSP%E6%8A%80%E6%9C%AF%E7%82%B9%E7%AC%AC%E4%B8%80%E7%AF%87%E3%80%8B%20-%20%E5%89%AF%E6%9C%AC%2F</url>
+    <url>%2F2018%2F11%2F29%2F02_JavaWeb%E5%9F%BA%E7%A1%80_%E3%80%8AJSP%E6%8A%80%E6%9C%AF%E7%82%B9%E7%AC%AC%E4%B8%80%E7%AF%87%E3%80%8B%2F</url>
     <content type="text"><![CDATA[02_JavaWeb基础_《JSP技术点第一讲》]]></content>
       <categories>
         <category>JavaWeb</category>
