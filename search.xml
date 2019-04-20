@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[06_JavaWeb基础_《SSM踩坑记录01》]]></title>
+    <url>%2F2019%2F04%2F06%2F06_JavaWeb%E5%9F%BA%E7%A1%80_%E3%80%8ASSM%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%9501%E3%80%8B%2F</url>
+    <content type="text"><![CDATA[记录1@service 作用：@Service(“serviceName”)注解相当于applicationContext.xml配置文件中配置的，表示给当前类命名一个别名，方便注入到其他需要用到的类中。@Service注解也可以不指定serviceName,如果不指定相当于，com.study.service.ServiceName就是这个类的全限定名,不加的话，默认别名就是当前类名，但是首字母小写。]]></content>
+      <categories>
+        <category>JavaWeb</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>SSM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[05_JavaWeb基础_《mybatis踩坑记录01》]]></title>
+    <url>%2F2019%2F03%2F26%2F05_JavaWeb%E5%9F%BA%E7%A1%80_%E3%80%8Amybatis%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%9501%E3%80%8B%2F</url>
+    <content type="text"><![CDATA[记录1学习mybatis遇到一个报错123456789101112Exception in thread &quot;main&quot; java.lang.AbstractMethodError: Method com/mysql/jdbc/PreparedStatement.isClosed()Z is abstract at com.mysql.jdbc.PreparedStatement.isClosed(PreparedStatement.java) at org.apache.ibatis.executor.BaseExecutor.closeStatement(BaseExecutor.java:285) at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65) at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:326) at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148) at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141) at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:136) at test.TestMyBatis.main(TestMyBatis.java:29) 解决办法：一直发现不了原因，原来是mysql的jar包问题，需要5.1.x版本及以上的，一开始用的是5.0.x版本,报错了，试了8.0版本的太高了。]]></content>
+      <categories>
+        <category>JavaWeb</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>SpringBoot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[04_JavaFX基础_《JavaFx学习记录01》]]></title>
+    <url>%2F2019%2F03%2F24%2F04_JavaFX%E5%9F%BA%E7%A1%80_%E3%80%8AJavaFx%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%9501%E3%80%8B%2F</url>
+    <content type="text"><![CDATA[记录1JavaFX制作一个简单的时钟：https://blog.csdn.net/qiyuanguren/article/details/78155697 期间遇到的bug：1.12&lt;AnchorPane fx:id="clock_pane" fx:controller="sample.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"&gt; &lt;children&gt; 如果用sceneBulider构建界面，fxm文件会缺少 fx:controller=”sample.Controller”导致抛出Exception： Caused by: javafx.fxml.LoadException: No controller specified. 解决办法：clock.fxml中fx:id与Controller类要相同]]></content>
+      <categories>
+        <category>JavaWeb</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>SpringBoot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[03_JavaWeb基础_《SpringBoot项目踩坑记录01》]]></title>
     <url>%2F2019%2F03%2F22%2F03_JavaWeb%E5%9F%BA%E7%A1%80_%E3%80%8ASpringBoot%E9%A1%B9%E7%9B%AE%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%9501%E3%80%8B%2F</url>
     <content type="text"><![CDATA[遇到的坑：1.pdf复制过来的会自带空格，但是idea发现不了，会报错。解决办法：删除重新打 2.maven配置的plugins的包下面报红线解决办法：https://www.cnblogs.com/best-lwj/articles/9221309.html 删除所有以lastUpdated结尾的文件重新点击reimport即可 3.pdf的配置直接粘贴到pom文件和xml文件，然后昨天pom文件报错，今天xml文件报错我错了 低级问题联系两个坑 估计这辈子都忘不了了emmmm 4.Maven run 的时候错误Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE:repackage (default) on project spring-boot-01-hello: Execution default of goal org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE:repackage failed: Plugin org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE or one of its dependencies could not be resolved: Failed to collect dependencies at org.springframework.boot:spring-boot-maven-plugin:jar:2.0.6.RELEASE -&gt; org.apache.maven:maven-archiver:jar:2.6 -&gt; org.codehaus.plexus:plexus-archiver:jar:2.8.1: Failed to read artifact descriptor for org.codehaus.plexus:plexus-archiver:jar:2.8.1: Could not transfer artifact org.codehaus.plexus:plexus-components:pom:1.3 from/to alimaven (http://maven.aliyun.com/nexus/content/groups/public/): maven.aliyun.com: Unknown host maven.aliyun.com -&gt; [Help 1][ERROR] 莫名其妙好了，可能是因为加了依赖： `xml com.mengxuegu.springboot.HelloMainApplication &lt;project.build.sourceEncoding&gt; UTF-8 &lt;/project.build.sourceEncoding&gt; &lt;project.reporting.outputEncoding&gt; UTF-8 &lt;/project.reporting.outputEncoding&gt; &lt;java.version&gt; 1.8 &lt;/java.version&gt;]]></content>
