@@ -13,6 +13,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[03_JavaWeb基础_《SpringBoot项目踩坑记录01》]]></title>
+    <url>%2Fposts%2F3b95cbb0%2F</url>
+    <content type="text"><![CDATA[遇到的坑：1.pdf复制过来的会自带空格，但是idea发现不了，会报错。解决办法：删除重新打 2.maven配置的plugins的包下面报红线解决办法：https://www.cnblogs.com/best-lwj/articles/9221309.html 删除所有以lastUpdated结尾的文件重新点击reimport即可 3.pdf的配置直接粘贴到pom文件和xml文件，然后昨天pom文件报错，今天xml文件报错我错了 低级问题联系两个坑 估计这辈子都忘不了了emmmm 4.Maven run 的时候错误Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE:repackage (default) on project spring-boot-01-hello: Execution default of goal org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE:repackage failed: Plugin org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE or one of its dependencies could not be resolved: Failed to collect dependencies at org.springframework.boot:spring-boot-maven-plugin:jar:2.0.6.RELEASE -&gt; org.apache.maven:maven-archiver:jar:2.6 -&gt; org.codehaus.plexus:plexus-archiver:jar:2.8.1: Failed to read artifact descriptor for org.codehaus.plexus:plexus-archiver:jar:2.8.1: Could not transfer artifact org.codehaus.plexus:plexus-components:pom:1.3 from/to alimaven (http://maven.aliyun.com/nexus/content/groups/public/): maven.aliyun.com: Unknown host maven.aliyun.com -&gt; [Help 1][ERROR] 莫名其妙好了，可能是因为加了依赖： `xml com.mengxuegu.springboot.HelloMainApplication &lt;project.build.sourceEncoding&gt; UTF-8 &lt;/project.build.sourceEncoding&gt; &lt;project.reporting.outputEncoding&gt; UTF-8 &lt;/project.reporting.outputEncoding&gt; &lt;java.version&gt; 1.8 &lt;/java.version&gt;]]></content>
+      <categories>
+        <category>JavaWeb</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>SpringBoot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[06_JavaWeb基础_《SSM踩坑记录01》]]></title>
     <url>%2Fposts%2Fundefined%2F</url>
     <content type="text"><![CDATA[记录1@service 作用：@Service(“serviceName”)注解相当于applicationContext.xml配置文件中配置的，表示给当前类命名一个别名，方便注入到其他需要用到的类中。@Service注解也可以不指定serviceName,如果不指定相当于，com.study.service.ServiceName就是这个类的全限定名,不加的话，默认别名就是当前类名，但是首字母小写。]]></content>
