@@ -340,207 +340,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/3b95cbb0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="铭戈栈">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="铭戈栈的主页">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/posts/3b95cbb0/" itemprop="url">
-                  03_JavaWeb基础_《SpringBoot项目踩坑记录01》
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-01-01 00:00:00" itemprop="dateCreated datePublished" datetime="2020-01-01T00:00:00+08:00">2020-01-01</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-20 22:38:32" itemprop="dateModified" datetime="2019-04-20T22:38:32+08:00">2019-04-20</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaWeb/" itemprop="url" rel="index"><span itemprop="name">JavaWeb</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/posts/3b95cbb0/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/posts/3b95cbb0/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/posts/3b95cbb0/" class="leancloud_visitors" data-flag-title="03_JavaWeb基础_《SpringBoot项目踩坑记录01》">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="遇到的坑："><a href="#遇到的坑：" class="headerlink" title="遇到的坑："></a>遇到的坑：</h3><p>1.pdf复制过来的会自带空格，但是idea发现不了，会报错。<br>解决办法：删除重新打</p>
-<p>2.maven配置的plugins的包下面报红线<br><img src="https://i.loli.net/2019/03/22/5c943eca35742.png" alt="002plugin配置出错信息.png"><br>解决办法：<br><a href="https://www.cnblogs.com/best-lwj/articles/9221309.html" target="_blank" rel="noopener">https://www.cnblogs.com/best-lwj/articles/9221309.html</a></p>
-<p> 删除所有以lastUpdated结尾的文件<br>重新点击reimport即可</p>
-<p>3.pdf的配置直接粘贴到pom文件和xml文件，然后昨天pom文件报错，今天xml文件报错<br>我错了 低级问题联系两个坑 估计这辈子都忘不了了emmmm</p>
-<p>4.Maven run  的时候错误<br>Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE:repackage (default) on project spring-boot-01-hello: Execution default of goal org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE:repackage failed: Plugin org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE or one of its dependencies could not be resolved: Failed to collect dependencies at org.springframework.boot:spring-boot-maven-plugin:jar:2.0.6.RELEASE -&gt; org.apache.maven:maven-archiver:jar:2.6 -&gt; org.codehaus.plexus:plexus-archiver:jar:2.8.1: Failed to read artifact descriptor for org.codehaus.plexus:plexus-archiver:jar:2.8.1: Could not transfer artifact org.codehaus.plexus:plexus-components:pom:1.3 from/to alimaven (<a href="http://maven.aliyun.com/nexus/content/groups/public/)" target="_blank" rel="noopener">http://maven.aliyun.com/nexus/content/groups/public/)</a>: maven.aliyun.com: Unknown host maven.aliyun.com -&gt; [Help 1]<br>[ERROR] </p>
-<p>莫名其妙好了，可能是因为加了依赖：</p>
-<p><code>`</code>xml<br> <properties><br>        <start-class><br>        com.mengxuegu.springboot.HelloMainApplication<br>        </start-class><br>        &lt;project.build.sourceEncoding&gt;<br>        UTF-8<br>        &lt;/project.build.sourceEncoding&gt;<br>        &lt;project.reporting.outputEncoding&gt;<br>        UTF-8<br>        &lt;/project.reporting.outputEncoding&gt;<br>        &lt;java.version&gt;<br>        1.8<br>        &lt;/java.version&gt;<br></properties></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <div>
-  
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/e8bf1285/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -561,7 +360,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/posts/e8bf1285/" itemprop="url">
-                  C++学习_001
+                  机器学习思维导图
                 </a>
               
             
@@ -587,7 +386,7 @@
                 
               
 
-              <time title="创建时间：2019-08-22 22:36:31" itemprop="dateCreated datePublished" datetime="2019-08-22T22:36:31+08:00">2019-08-22</time>
+              <time title="创建时间：2019-03-29 22:36:31" itemprop="dateCreated datePublished" datetime="2019-03-29T22:36:31+08:00">2019-03-29</time>
             
 
             
@@ -604,7 +403,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-24 16:58:43" itemprop="dateModified" datetime="2019-08-24T16:58:43+08:00">2019-08-24</time>
+                <time title="修改时间：2019-09-11 21:10:49" itemprop="dateModified" datetime="2019-09-11T21:10:49+08:00">2019-09-11</time>
               
             
           </span>
@@ -621,7 +420,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
 
                 
                 
@@ -645,7 +444,7 @@
 
           
           
-             <span id="/posts/e8bf1285/" class="leancloud_visitors" data-flag-title="C++学习_001">
+             <span id="/posts/e8bf1285/" class="leancloud_visitors" data-flag-title="机器学习思维导图">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -678,7 +477,7 @@
       
         
           
-            <p>#</p>
+            <p><a href="https://img-blog.csdn.net/20180914200606584?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N4YjA4NDE5MDExMTY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" target="_blank" rel="noopener">https://img-blog.csdn.net/20180914200606584?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N4YjA4NDE5MDExMTY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70</a></p>
 
           
         
@@ -1428,6 +1227,206 @@ http://www.cnblogs.com/foreverking/articles/2234225.html
 https://www.cnblogs.com/y3w3l/p/6444837.html
 https://blog.csdn.net/liuzhenya1994/article/details/80254958
 </code></pre>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+  
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/3b95cbb0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="铭戈栈">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="铭戈栈的主页">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/posts/3b95cbb0/" itemprop="url">
+                  03_JavaWeb基础_《SpringBoot项目踩坑记录01》
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-01 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-01T00:00:00+08:00">2018-09-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-11 21:08:38" itemprop="dateModified" datetime="2019-09-11T21:08:38+08:00">2019-09-11</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaWeb/" itemprop="url" rel="index"><span itemprop="name">JavaWeb</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/posts/3b95cbb0/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/posts/3b95cbb0/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/posts/3b95cbb0/" class="leancloud_visitors" data-flag-title="03_JavaWeb基础_《SpringBoot项目踩坑记录01》">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="遇到的坑："><a href="#遇到的坑：" class="headerlink" title="遇到的坑："></a>遇到的坑：</h3><p>1.pdf复制过来的会自带空格，但是idea发现不了，会报错。<br>解决办法：删除重新打</p>
+<p>2.maven配置的plugins的包下面报红线<br><img src="https://i.loli.net/2019/03/22/5c943eca35742.png" alt="002plugin配置出错信息.png"><br>解决办法：<br><a href="https://www.cnblogs.com/best-lwj/articles/9221309.html" target="_blank" rel="noopener">https://www.cnblogs.com/best-lwj/articles/9221309.html</a></p>
+<p> 删除所有以lastUpdated结尾的文件<br>重新点击reimport即可</p>
+<p>3.pdf的配置直接粘贴到pom文件和xml文件，然后昨天pom文件报错，今天xml文件报错<br>我错了 低级问题联系两个坑 估计这辈子都忘不了了emmmm</p>
+<p>4.Maven run  的时候错误<br>Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE:repackage (default) on project spring-boot-01-hello: Execution default of goal org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE:repackage failed: Plugin org.springframework.boot:spring-boot-maven-plugin:2.0.6.RELEASE or one of its dependencies could not be resolved: Failed to collect dependencies at org.springframework.boot:spring-boot-maven-plugin:jar:2.0.6.RELEASE -&gt; org.apache.maven:maven-archiver:jar:2.6 -&gt; org.codehaus.plexus:plexus-archiver:jar:2.8.1: Failed to read artifact descriptor for org.codehaus.plexus:plexus-archiver:jar:2.8.1: Could not transfer artifact org.codehaus.plexus:plexus-components:pom:1.3 from/to alimaven (<a href="http://maven.aliyun.com/nexus/content/groups/public/)" target="_blank" rel="noopener">http://maven.aliyun.com/nexus/content/groups/public/)</a>: maven.aliyun.com: Unknown host maven.aliyun.com -&gt; [Help 1]<br>[ERROR] </p>
+<p>莫名其妙好了，可能是因为加了依赖：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">start-class</span>&gt;</span></span><br><span class="line">        com.mengxuegu.springboot.HelloMainApplication</span><br><span class="line">        <span class="tag">&lt;/<span class="name">start-class</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        UTF-8</span><br><span class="line">        <span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        UTF-8</span><br><span class="line">        <span class="tag">&lt;/<span class="name">project.reporting.outputEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">java.version</span>&gt;</span></span><br><span class="line">        1.8</span><br><span class="line">        <span class="tag">&lt;/<span class="name">java.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure>
           
         
       
@@ -2344,6 +2343,8 @@ https://blog.csdn.net/liuzhenya1994/article/details/80254958
                     
                       
                     
+                      
+                    
                     <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
@@ -2356,6 +2357,10 @@ https://blog.csdn.net/liuzhenya1994/article/details/80254958
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
+                    
+                      
+                    
+                      
                     
                       
                     
